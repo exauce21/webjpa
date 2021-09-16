@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="webjpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>sn.isi.entities.User</class>
+		<class>sn.isi.entities.Roles</class>
+		<class>sn.isi.entities.Academie</class>
+		<class>sn.isi.entities.Commission</class>
+		<class>sn.isi.entities.Eleve</class>
+		<class>sn.isi.entities.Enseignant</class>
+		<class>sn.isi.entities.Epreuve</class>
+		<class>sn.isi.entities.Etablissement</class>
+		<class>sn.isi.entities.Examen</class>
+		<class>sn.isi.entities.Inscription</class>
+		<class>sn.isi.entities.Note</class>
+		
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/webjpadb"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			
+			<property name="hibernate.format_sql" value="true"/>
+			<property name="hibernate.show_sql" value="true"/>
+			<property name="hibernate.hbm2ddl" value="update"/>
+		</properties>
+	</persistence-unit>
+</persistence>
